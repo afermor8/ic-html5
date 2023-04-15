@@ -23,7 +23,7 @@ pipeline {
         stage('Deploy')
         {
             steps{
-                sh 'surge ./_build/ arantxa.surge.sh --token $TOKEN'
+                sh 'surge ./_build/ arantxa.surge.sh --token ${{ secrets.SURGE_TOKEN }}'
             }
         }
         
